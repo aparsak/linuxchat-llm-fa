@@ -14,16 +14,16 @@ It integrates information from **PDFs, websites, Wikipedia pages, and HTML docum
 
 ## Features
 
-- ✅ Load and clean PDF content (e.g., _Just for Fun_ in Persian)
-- ✅ Scrape and load a Persian Linux blog (`https://linuxbook.ir`)
-- ✅ Extract Farsi articles from Wikipedia
-- ✅ Load local HTML files
-- ✅ Clean and preprocess Persian text
-- ✅ Chunk documents with overlap using LangChain
-- ✅ Embed using Cohere's `embed-multilingual-light-v3.0`
-- ✅ Store embeddings using FAISS vectorstore (locally)
-- ✅ Perform retrieval-based question answering with `command-r-plus` model
-- ✅ Apply MMR (Maximal Marginal Relevance) for diverse document retrieval
+- Load and clean PDF content (e.g., _Just for Fun_ in Persian)
+- Scrape and load a Persian Linux blog (`https://linuxbook.ir`)
+- Extract Farsi articles from Wikipedia
+- Load local HTML files
+- Clean and preprocess Persian text
+- Chunk documents with overlap using LangChain
+- Embed using Cohere's `embed-multilingual-light-v3.0`
+- Store embeddings using FAISS vectorstore (locally)
+- Perform retrieval-based question answering with `command-r-plus` model
+- Apply MMR (Maximal Marginal Relevance) for diverse document retrieval
 
 ---
 
@@ -58,9 +58,8 @@ It integrates information from **PDFs, websites, Wikipedia pages, and HTML docum
   pip install -r requirements.txt
   ```
 
-  . Make sure to set your Cohere API key in the script before running.
-
-  . Data files (PDFs, HTML, etc.) should be placed in the appropriate data/ directories.
+- Make sure to set your Cohere API key in the script before running.
+- Data files (PDFs, HTML, etc.) should be placed in the appropriate data/ directories.
 
 ---
 ## 🙏 Acknowledgments
