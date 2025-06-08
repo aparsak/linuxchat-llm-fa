@@ -6,9 +6,9 @@ This project builds a **conversational QA chatbot** that answers user questions 
 
 ## 📘 Project Overview
 
-This project demonstrates how to build a Persian-language **Question Answering (QA)** system using [LangChain](https://www.langchain.com/), Cohere multilingual embeddings, and a FAISS vectorstore.
+This project demonstrates how to build a Persian-language **Retrieval-Augmented Generation (RAG)** Question Answering (QA) system using [LangChain](https://www.langchain.com/), Cohere multilingual embeddings, and a FAISS vectorstore.
 
-It integrates information from **PDFs, websites, Wikipedia pages, and HTML documents**, preprocesses them, generates embeddings, and enables natural language querying in Persian.
+It integrates information from **PDFs, websites, Wikipedia pages, and HTML documents**, preprocesses them, generates embeddings, and enables natural language querying in Persian by retrieving relevant documents to augment the language model’s answers.
 
 ---
 
