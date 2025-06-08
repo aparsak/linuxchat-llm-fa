@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>stallman.org search</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+<script language="javascript" type="text/javascript">
+function stopRKey(evt) {
+	var evt  = (evt) ? evt : ((event) ? event : null);
+	if (evt.keyCode == 13) { return false; }
+}
+document.onkeypress = stopRKey;
+</script>
+
+</head>
+<body>
+
+<div id="titlebar">
+	<img src="images/crossfade.png" class="bg" width="100%" height="100px" alt="titlebar"/>
+	<div id="tbar_inner">
+		<h1>Search Stallman.org</h1>
+	</div>
+</div>
+
+<div id="outer">
+
+	<div id="main">
+
+		<div id="top">
+
+			<div class="search">
+				<form method="post" id="searchform" action="/cgi-bin/site-search.cgi">
+				<table>
+					<tr>
+						<th>Search <em>all pages</em> for:</th>
+						<td colspan="2"><input name="term" id="term"/></td>
+						<td><label for="case">case sensitive</label><input id="case" name="case" type="checkbox"/></td>
+					</tr><tr>
+						<th></th>
+						<td><button name="stype" type="submit" value="norm"/>Normal Search</td>
+						<td><button name="stype" type="submit" value="regexp"/>Regular Expression</td>
+					</tr>
+				</table>
+				</form>
+				<p class="desc"><i>Returns a list of pages with context for each hit.</i></p>
+			</div>
+
+			<div class="search">
+                <form action="https://stallman.org/cgi-bin/new-polnote-search.cgi">
+				<table>
+					<tr>
+						<th>Search <em>political notes</em> for:</th>
+						<td colspan="2"><input name="term" id="term"/></td>
+						<td></td>
+					</tr><tr>
+						<th></th>
+                        <td><input type="submit" name="type" value="Normal search" /></td>
+                        <td><input type="submit" name="type" value="Regexp search" /></td>
+					</tr>
+				</table>
+				</form>
+				<p class="desc"><i>Search political notes from March 2003 to the present.  Returns a list of <b>individual notes</b> in their entirety.</i></p>
+				<p class="desc">Syntax for pol note search is syntax for <a href="https://www.sqlite.org/fts5.html#full_text_query_syntax">SQLite's full text search engine</a>.</p>
+			</div>
+
+		</div>
+
+		<div style="padding-top:20px">
+			<p class="center" style="color:#004400">Individual terms containing only one non-whitespace character will be silently rejected.</p>
+		</div>
+
+		<div id="left">
+			<h2>Normal Search (All pages)</h2>
+			<p>The normal search does a literal match for one or more terms.  For example,</p>
+			<p class="eg">whiskey xray</p>
+			<p>will find pages with "whiskey" and/or "xray" in them.  
+			If you quote several words ("whiskey xray"), they will be searched for together as a phrase.  So
+			<p class="eg">uniform "kilo bravo"</p>
+			<p>will find pages with "uniform" and/or "kilo bravo" in them.
+			The results are ranked by the number of hits, but pages which contain ALL terms are favored.
+			So if you search for
+			<p class="eg">Bob Doug</p>
+			<p>a page which contains "bob" twice and "doug" once will rank higher than a page containing "bob" a hundred times but no doug.
+			</p>
+			<p>The <i>political notes search</i> ranks only by the number of terms hit, and not by the number of total hits.
+		</div>
+
+		<div id="right">
+			<h2>Regular Expression (All pages)</h2>
+			<p>These are PCRE's ("Perl Compatible Regular Expressions")
+			For example:
+			<p class="eg">\bAmerica\b</p>
+			<p>will match "America" as a discrete word -- it will NOT match "Americana" or "Americanism".
+			<p class="dent">You will be warned if your regexp is invalid. Using stuff like <i>.*</i>, even in the non-greedy form <i>.*?</i>, may
+			not be very useful. If you want to look for one thing or another indefinitely seperated, it's better to use multiple terms.</p>
+			<p class="dent">MULTIPLE TERMS: The regular expression search does this the same way as the normal search, except `backticks` are used to indicate whole phrases
+			instead of double quotes.  So:</p>
+			<p class="eg">\buniform\b `(kilo|foo bar) bravo` whales?</p>
+			<p>Will find pages with the regular expressions "\buniform\b", "(kilo|foo bar) bravo", and/or "whales?" in them.
+			The "?" here is a regexp quantifier, so this term will match "whale" or "whales".  If you want to literally search for
+			something with a question mark in it, use, e.g., "whales\?".
+			<p class="dent">Pages are ranked the same way they are for the normal search.</p>
+		</div>
+
+		<div id="note">
+			<br/>
+			<p class="center" style="color: #666666">
+			<i>Please send questions, bug reports, etc. about the site-search to: rms at gnu dot org</i></p>
+			<p class="center" style="color: #666666">
+			<i>Complete source code for the search engine is
+			<a href="StallmanOrgSearch.tar.gz">available here</a>.</i></p>
+		</div>
+
+	</div>
+
+	<div id="bottom"></div>
+</div>
+
+
+<script type="text/javascript">
+	var sform = document.getElementById('searchform');
+	var pform = document.getElementById('polnoteform');
+</script>
+
+</body>
+</html>

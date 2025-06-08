@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Reasons not to use Cloudflare</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link media="all" href="/common/stallman.css" type="text/css"
+  rel="stylesheet" />
+  <link rel="shortcut icon" href="/common/rms.png" />
+</head>
+
+<body>
+<h1>Richard Stallman's personal site.</h1>
+<h2><a href="/">https://stallman.org</a></h2>
+<p>
+For current political commentary, see
+the <a href="/archives/polnotes.html">daily
+political notes</a>.
+</p>
+<p>
+<a href="/biographies.html#serious">RMS's Bio</a> |
+<a href="http://gnu.org">The GNU Project</a>
+</p>
+
+<hr />
+
+
+<div class="c2">
+
+What's bad about:
+<a href="/airbnb.html">Airbnb</a> |
+<a href="/amazon.html">Amazon</a> |
+<a href="/amtrak.html">Amtrak</a> |
+<a href="/ancestry.html">Ancestry</a> |
+<a href="/apple.html">Apple</a> |
+<a href="/change.org.html">Change.org</a> |
+<a href="/chatgpt.html">ChatGPT</a> |
+<a href="/cloudflare.html">Cloudflare</a> |
+<a href="/discord.html">Discord</a> |
+<a href="/ebooks.pdf">Ebooks</a> |
+<a href="/eventbrite.html">Eventbrite</a> |
+<a href="/evernote.html">Evernote</a> |
+<a href="/twitter.html">Ex-Twitter</a> |
+<a href="/facebook.html">Facebook</a> |
+<a href="/flixbus.html">FLIXbus</a> |
+<a href="/frito-lay.html">Frito-Lay</a> |
+<a href="/frontier.html">Frontier</a> |
+<a href="/google.html">Google</a> |
+<a href="/gofundme.html">Gofundme</a> |
+<a href="/food-delivery.html">Grubhub</a> |
+<a href="/in-n-out-burger.html">In-N-Out Burger</a> |
+<a href="/intel.html">Intel</a> |
+<a href="/linkedin.html">LinkedIn</a> |
+<a href="/lyft.html">Lyft</a> |
+<!-- meetup.com has the same injustices as eventbrite.com
+     and they share one page -->
+<a href="/eventbrite.html">Meetup</a> |
+<a href="/microsoft.html">Microsoft</a> |
+<a href="/netflix.html">Netflix</a> |
+<a href="/patreon.html">Patreon</a> |
+<a href="/pay-toilets.html">Pay Toilets</a> |
+<a href="/privatization.html">Privatization</a> |
+<a href="/skype.html">Skype</a> |
+<a href="/slack.html">Slack</a> |
+<a href="/spotify.html">Spotify</a> |
+<a href="/tesla.html">Tesla</a> |
+<a href="/threads.html">Threads</a> |
+<a href="/ticketmaster.html">Ticketmaster</a> |
+<!--<a href="/twitter.html">Ex-Twitter</a> |-->
+<a href="/uber.html">Uber</a> |
+<a href="/wendys.html">Wendy's</a> |
+<a href="/whatsapp.html">WhatsApp</a> |
+<a href="/zoom.html">Zoom</a> |
+
+</div>
+
+
+<h1>Reasons Not to Use Cloudflare</h1>
+
+Many web sites use Cloudflare to filter access.  The goal of
+preventing DDS attacks is not in itself bad, but Cloudflare does bad
+things to each legitimate visitor:
+
+<ul>
+<li> It determine's the visitor's location based on per IP address.
+(Using a proxy can thwart this.)  Tracking people is unjust.
+
+<li> It acts as a man-in-the-middle in encrypted (HTTPS) communication
+between the visitor and the site:  Cloudflare knows what page the
+visitor is looking at and sees any other communication as well.
+
+</ul>
+
+At times in the past I've noticed that Cloudflare blocked connecting
+via Tor.  My recollection &mdash; which is somewhat hazy by now &mdash; was that
+Cloudflare decided that the Tor exit node cast doubt on whether I was
+a human being, and it asked me to answer a CAPTCHA.
+<p>
+(Why should it matter whether I am a human being, I wonder, when all I
+try to do is look at a page once?)
+<p>
+I have no objection to answering a CAPTCHA, in principle; however,
+Cloudflare disregarded my answer, because the CAPTCHA depended on
+nonfree JavaScript code that Cloudflare sent to my browser.  Of
+course, <a href="https://gnu.org/philosophy/javascript-trap.html">I refuse to run that</a>.
+
+<hr>
+Copyright (C) 2022 Richard Stallman<br>
+Verbatim copying and distribution of this entire page are
+permitted in any medium, provided this notice is preserved.
+</body>
+</html>

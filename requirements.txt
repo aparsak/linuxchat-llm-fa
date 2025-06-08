@@ -1,0 +1,17 @@
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-cohere==0.2.2
+langchain-text-splitters==0.2.2
+langchain-chroma==0.1.2
+langchain-unstructured==0.1.1
+ipykernel
+pypdfium2
+wikipedia
+unstructured
+pandas
+numpy
+tqdm
+beautifulsoup4
+lxml
+requests
+tiktoken
